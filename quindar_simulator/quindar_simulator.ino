@@ -1,6 +1,7 @@
 #include "pitches.h"
 
 int buttonPin = 12;
+int buzzerPin = 8;
 int introPitch = 2525;
 int outroPitch = 2475;
 int previousState = 0;
@@ -22,9 +23,9 @@ void loop() {
 
  if (previousState != currentState){
     if (currentState == 0){
-    tone(8,introPitch,duration);
+    tone(buzzerPin,introPitch,duration);
     } else if (currentState == 1){
-      tone(8,outroPitch,duration);
+      tone(buzzerPin,outroPitch,duration);
     }
     delay(duration);
  }
